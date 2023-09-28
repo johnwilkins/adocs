@@ -1,0 +1,38 @@
+:_content-type: ASSEMBLY
+[id="{{anchor}}"]
+= {{ast}}
+
+//include::_attributes/common-attributes.adoc[]
+
+:context: {{context}}
+
+toc::[]
+
+[role="_abstract"]
+{{intro}}
+
+{% if lorem == True -%}
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed tempus tempor nisi eu vulputate. Suspendisse a augue sed mauris commodo viverra. Nam auctor sagittis metus semper dictum. Nullam eu nulla at est consequat lacinia sed eget diam. Vestibulum ac viverra enim, a pulvinar dolor. Morbi dapibus rutrum metus, quis semper neque sagittis in. Nunc fringilla ligula nec ligula lobortis, vitae euismod justo mattis. Proin at arcu purus. Vestibulum a placerat ipsum.
+{%- endif %}
+//Add a prerequisites section if needed.
+//[id="prerequisites-unique-id"]
+//== Prerequisites
+//* Should be a
+//* Bulleted list
+
+//Add xrefs and links to the assembly, rather than the module.
+//[role="_additional-resources"]
+//[id="additional-resources-unique-id"]
+//== Additional resources
+// * Should be a 
+// * Bulleted list
+
+//Add a next steps section after the anchor tags if needed. 
+//Note. The utility will append new includes at the end of the file,
+//so you may need to cut and paste them to an appropriate location
+//within the assembly. 
+//[id="next-steps-unique-id"]
+//== Next steps
+
+//Add text and includes here.
+{{include_text}}

@@ -1,0 +1,16 @@
+# Include README and LICENSE files
+include README.md
+include LICENSE
+
+# Include documentation files in the docs directory
+recursive-include docs *.md
+
+# Include data files in the data directory
+recursive-include adocs/templates *.adoc
+recursive-include adocs/config *
+
+# Exclude files and directories that aren't needed in the distribution package
+exclude .gitignore
+exclude .DS_Store
+exclude *.pyc
+exclude __pycache__

@@ -14,18 +14,20 @@ import pkg_resources
 iniParser = configparser.RawConfigParser()
 
 
+# Expand the user's home directory
+ini_file_path = os.path.expanduser('~/adocs/adoc.ini')
+
 try:
-    resource_path = 'config/adoc.ini'
-    ini_content = pkg_resources.resource_string('adocs', resource_path).decode()
-    iniParser.read_string(ini_content)
-    found = True
+    with open(ini_file_path, 'r') as ini_file:
+        iniParser.read_file(ini_file)
+        found = True
 except FileNotFoundError:
     found = False
     print("\nError: I did not find the adoc.ini file.")
     exit()
 
-adoc_conf_file = iniParser.get('adoc', 'adoc_conf_file')
-template_directory = iniParser.get('adoc', 'template_dir')
+adoc_conf_file = os.path.expanduser(iniParser.get('adoc', 'adoc_conf_file'))
+template_directory = os.path.expanduser(iniParser.get('adoc', 'template_dir'))
 editor_cli=iniParser.get('adoc', 'editor_cli')
 
 try:
